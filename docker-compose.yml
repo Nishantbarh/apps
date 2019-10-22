@@ -1,0 +1,47 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+
+version: '3.7'
+
+
+services:
+
+  document-server:
+    build:
+      context: Document-service .
+      build: ./apps/document-server
+      images:nkrsingh/myapps:document-server:latest
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000" 
+    restart: always
+    
+    hello-docker:
+    build:
+      context: hello-docker .
+      build: ./apps/hello-docker
+      images:nkrsingh/myapps:hello-docker:latest
+      dockerfile: Dockerfile
+    ports:
+      - "9080:9080"
+    restart: always
+    
+    nodejs-hello-world:
+    build:
+      context: nodejs-hello-world .
+      build: ./apps/nodejs-hello-world
+      images:nkrsingh/myapps:nodejs-hello-world:latest
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
+    
+    pyshop:
+    build:
+      context: pyshop .
+      build: ./apps/pyshop
+      images:nkrsingh/myapps:latest
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    restart: always
+  
