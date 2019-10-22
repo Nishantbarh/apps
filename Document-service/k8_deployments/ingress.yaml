@@ -1,0 +1,29 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: cafe-ingress
+spec:
+  rules:
+    -
+      host: cafe.example.com
+      http:
+        paths:
+          -
+            backend:
+              serviceName: flask-website
+              servicePort: 80
+            path: /docapp
+          -
+            backend:
+              serviceName: pyshop-website
+              servicePort: 80
+            path: /products
+          -
+            backend:
+              serviceName: document-website
+              servicePort: 80
+            path: / 

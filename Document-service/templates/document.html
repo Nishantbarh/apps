@@ -1,0 +1,39 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+
+<div class="row1">
+    <div class="column">
+        <img src="https://www.researchgate.net/publication/281379377/figure/fig8/AS:324526765297666@1454384618053/Sample-scanned-documents-used-for-the-performance-evaluation.png"
+             alt="Nature" style="width:10%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="https://www.researchgate.net/publication/281379377/figure/fig8/AS:324526765297666@1454384618053/Sample-scanned-documents-used-for-the-performance-evaluation.png"
+             alt="Snow" style="width:10%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="https://www.researchgate.net/publication/281379377/figure/fig8/AS:324526765297666@1454384618053/Sample-scanned-documents-used-for-the-performance-evaluation.png"
+             alt="Mountains" style="width:10%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="https://www.researchgate.net/publication/281379377/figure/fig8/AS:324526765297666@1454384618053/Sample-scanned-documents-used-for-the-performance-evaluation.png"
+             alt="Lights" style="width:10%" onclick="myFunction(this);">
+    </div>
+</div>
+
+<div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+
+</script>
+{% endblock %}

@@ -1,0 +1,39 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    app: flask-website
+  name: flask-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-website
+  template:
+    metadata:
+      labels:
+        app: flask-website
+    spec:
+      containers:
+      - name: flask-website
+        imagePullPolicy: Always
+        image: nkrsingh/myapps:document-website-1.0.0
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: mycred
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  labels:
+    app: flask-website
+  name: flask-website
+spec:
+  type: NodePort 
+  ports: 
+    - port: 80
+      targetPort: 5000
+      nodePort: 31040
+  selector: 
+    app: flask-website       

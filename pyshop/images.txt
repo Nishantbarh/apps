@@ -1,0 +1,17 @@
+REPOSITORY                                TAG                 IMAGE ID            CREATED             SIZE
+myrepo/pyshop                             latest              df0cb4b03b28        6 minutes ago       981MB
+pyshop                                    latest              df0cb4b03b28        6 minutes ago       981MB
+k8s.gcr.io/kube-proxy                     v1.15.2             167bbf6c9338        3 days ago          82.4MB
+k8s.gcr.io/kube-apiserver                 v1.15.2             34a53be6c9a7        3 days ago          207MB
+k8s.gcr.io/kube-scheduler                 v1.15.2             88fa9cb27bd2        3 days ago          81.1MB
+k8s.gcr.io/kube-controller-manager        v1.15.2             9f5df470155d        3 days ago          159MB
+python                                    3.7                 14a2caeca327        9 days ago          918MB
+k8s.gcr.io/kube-addon-manager             v9.0                119701e77cbc        6 months ago        83.1MB
+k8s.gcr.io/coredns                        1.3.1               eb516548c180        6 months ago        40.3MB
+k8s.gcr.io/kubernetes-dashboard-amd64     v1.10.1             f9aed6605b81        7 months ago        122MB
+k8s.gcr.io/etcd                           3.3.10              2c4adeb21b4f        8 months ago        258MB
+k8s.gcr.io/k8s-dns-sidecar-amd64          1.14.13             4b2e93f0133d        10 months ago       42.9MB
+k8s.gcr.io/k8s-dns-kube-dns-amd64         1.14.13             55a3c5209c5e        10 months ago       51.2MB
+k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64    1.14.13             6dc8ef8287d3        10 months ago       41.4MB
+k8s.gcr.io/pause                          3.1                 da86e6ba6ca1        19 months ago       742kB
+gcr.io/k8s-minikube/storage-provisioner   v1.8.1              4689081edb10        21 months ago       80.8MB

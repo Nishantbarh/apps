@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document App Login Form</title>
+     <link href="{{ url_for('static',filename='css/login.css') }}" rel="stylesheet">
+</head>
+<body>
+<span href="#" class="button" id="toggle-login">Log in</span>
+<div id="login">
+    <div id="triangle"></div>
+    <h1>Log in</h1>
+    <form method="POST" action="/login">
+        <input type="text" placeholder="Username" name="Username" value="{{request.form.Username }}"/>
+        <input type="password" placeholder="Password" name="password" value="{{request.form.password }}">
+        <input type="submit" value="Login"/>
+    </form>
+    {% if error %}
+     <p class="error"><strong>Error:</strong> {{ error }}
+        {% endif %}
+</div>
+<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+<script src="/static/js/index.js"></script>
+</body>
+</html>

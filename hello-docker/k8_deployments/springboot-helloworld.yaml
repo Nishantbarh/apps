@@ -1,0 +1,40 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    app: helloworld-apps
+  name: helloworld-apps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-apps
+  template:     
+    metadata:
+      labels:
+        app: helloworld-apps
+    spec:
+      containers:
+      - name: helloworld-apps
+        imagePullPolicy: Always
+        image: nkrsingh/myapps:helloworld-apps1.0
+        ports:
+        - containerPort: 9080
+      imagePullSecrets:
+      - name: mycred
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: helloworld-apps
+  name: helloworld-apps
+spec:
+ type: NodePort
+ ports:
+ - port: 80
+   targetPort: 9080
+   nodePort: 31042
+ selector:
+  app: helloworld-apps
