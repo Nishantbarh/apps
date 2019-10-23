@@ -35,6 +35,6 @@ spec:
  ports:
  - port: 80
    targetPort: 9080
-   nodePort: 31042
+   nodePort: 30142
  selector:
   app: helloworld-apps
