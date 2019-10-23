@@ -4,7 +4,7 @@ services:
         build:
             context: Document-service
             dockerfile: Dockerfile
-        image: nkrsingh/myapps/document-server:latest      
+        image: nkrsingh/myapps:document-server-1.0.0-snapshot     
         ports:
             - 5000:5000
         restart: always
@@ -12,7 +12,7 @@ services:
         build:
             context: hello-docker
             dockerfile: Dockerfile
-        image: nkrsingh/myapps/hello-docker:latest        
+        image: nkrsingh/myapps:hello-docker-1.0.0-snapshot       
         ports:
             - 9080:9080
         restart: always
@@ -20,7 +20,7 @@ services:
         build:
             context: nodejs-hello-world
             dockerfile: Dockerfile
-        image: nkrsingh/myapps/nodejs-hello-world:latest      
+        image: nkrsingh/myapps:nodejs-hello-world-1.0.0-snapshot      
         ports:
             - 8080:8080
         restart: always
@@ -28,7 +28,7 @@ services:
         build:
             context: pyshop
             dockerfile: Dockerfile
-        image: nkrsingh/myapps/pyshop:latest   
+        image: nkrsingh/myapps:pyshop-1.0.0-snapshot   
         ports:
             - 8000:8000
         restart: always
