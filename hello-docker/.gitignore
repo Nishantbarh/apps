@@ -22,6 +22,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+.k8_deployments/*
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
