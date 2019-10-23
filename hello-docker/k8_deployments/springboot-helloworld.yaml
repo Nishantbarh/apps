@@ -17,7 +17,7 @@ spec:
       containers:
       - name: helloworld-apps
         imagePullPolicy: Always
-        image: nkrsingh/myapps:helloworld-apps1.0
+        image: nkrsingh/myapps:hello-docker-1.0.0-snapshot
         ports:
         - containerPort: 9080
       imagePullSecrets:
