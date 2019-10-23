@@ -17,7 +17,7 @@ spec:
       containers:
       - name: flask-website
         imagePullPolicy: Always
-        image: nkrsingh/myapps:document-website-1.0.0
+        image: nkrsingh/myapps:document-server-1.0.0-snapshot
         ports:
         - containerPort: 5000
       imagePullSecrets:
