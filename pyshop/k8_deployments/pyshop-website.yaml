@@ -17,7 +17,7 @@ spec:
       containers:
       - name: pyshop-website
         imagePullPolicy: Always
-        image: nkrsingh/myapps:pyshop-1.0.0-snapshot
+        image: nkrsingh/myapps:pyshop-1.0.1-snapshot
         ports:
         - containerPort: 8000
       imagePullSecrets:
