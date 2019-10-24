@@ -17,7 +17,7 @@ spec:
       containers:
       - name: nodejs-apps
         imagePullPolicy: Always
-        image: nkrsingh/myapps:nodejs-apps-1.0.0
+        image: nkrsingh/myapps:nodejs-hello-world-1.0.0-snapshot
         ports:
         - containerPort: 5000
       imagePullSecrets:
@@ -34,6 +34,6 @@ spec:
   ports: 
     - port: 80
       targetPort: 5000
-      nodePort: 31040
+      nodePort: 30143
   selector: 
     app: nodejs-apps       
